@@ -1,0 +1,82 @@
+/* Custom orange glow effects */
+body {
+    background-color: #0f0f11;
+    color: #e2e8f0;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.glow-text {
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}
+
+.glow-border {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.15);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.glow-card:hover {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+    border-color: rgba(249, 115, 22, 0.6);
+    transform: translateY(-2px);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: #f97316;
+    /* Tailwind orange-500 */
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon {
+    color: #fb923c;
+    /* Tailwind orange-400 */
+    text-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+}
+
+/* Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+@keyframes fadeUpAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background accents */
+.bg-eclipse {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, rgba(15, 15, 17, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
